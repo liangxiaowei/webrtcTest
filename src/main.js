@@ -2,7 +2,8 @@
 
 // 媒体流约束，本例只开启视频
 const mediaStreamConstraints = {
-    video: true,
+    // video: true,
+    video: { facingMode: { exact: "environment" } }
 };
 // video元素用于保存视频流
 const localVideo = document.querySelector('video');
