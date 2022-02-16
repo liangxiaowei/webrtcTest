@@ -14,6 +14,9 @@ let localStream;
 function gotLocalMediaStream(mediaStream) {
     localStream = mediaStream;
     localVideo.srcObject = mediaStream;
+    setTimeout(() => {
+        localVideo.play();
+    }, 200);
 }
 
 // 错误处理函数，将错误信息log到console
